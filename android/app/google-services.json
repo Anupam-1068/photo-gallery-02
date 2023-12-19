@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "511006032710",
+    "project_id": "photo-gallery-app-53231",
+    "storage_bucket": "photo-gallery-app-53231.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511006032710:android:e303b75b1a96a9c9ac1b47",
+        "android_client_info": {
+          "package_name": "com.example.gallery_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAl9rjUQpniNTnTJtjRRyLp0U6OFKYZ0tA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511006032710:android:b94c5d1d26f7c0e3ac1b47",
+        "android_client_info": {
+          "package_name": "ee.mainor.photo_gallery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAl9rjUQpniNTnTJtjRRyLp0U6OFKYZ0tA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
