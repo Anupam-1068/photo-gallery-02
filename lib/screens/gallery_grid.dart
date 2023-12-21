@@ -1,13 +1,17 @@
+import 'dart:io';
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../controllers/photo_controller.dart';
+import '../controllers/image_retrieve.dart';
 import '../models/photo.dart';
+import '../models/user_model.dart';
 import 'details_screen.dart';
 
 class GalleryGrid extends StatelessWidget {
-  final PhotoController _photoController = PhotoController();
 
+  User? user = FirebaseAuth.instance.currentUser;
+  UserModel loggedInUser = UserModel();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,6 +38,24 @@ class GalleryGrid extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () async {
+                    // Fetch photos button pressed
+                    // Add logic to show a photo picker and upload the selected photo
+
+
+
+                  },
+                  child: Icon(Icons.add),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
             Expanded(
               child: Container(
                 padding: EdgeInsets.symmetric(
@@ -48,7 +70,7 @@ class GalleryGrid extends StatelessWidget {
                   ),
                 ),
                 child: FutureBuilder<List<Photo>>(
-                  future: _photoController.fetchPhotos(),
+                  future: ImageRetrieve(userId: loggedInUser.uid).retrieveImages(),
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
                       return Center(child: CircularProgressIndicator());

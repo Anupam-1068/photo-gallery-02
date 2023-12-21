@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:gallery_app/screens/gallery_grid.dart';
+import 'package:gallery_app/screens/login_screen.dart';
 
 import 'firebase_options.dart';
 
@@ -18,11 +18,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Firebase Photo Gallery',
+      title: 'Email And Password Login',
       theme: ThemeData(
-        // Your app theme
+        primarySwatch: Colors.red,
       ),
-      home: GalleryGrid(),
+      debugShowCheckedModeBanner: false,
+      home: LoginScreen(),
     );
   }
 }
