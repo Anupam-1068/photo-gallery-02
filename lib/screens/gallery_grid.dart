@@ -4,18 +4,19 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../controllers/image_retrieve.dart';
+import '../controllers/image_upload.dart';
 import '../models/photo.dart';
 import '../models/user_model.dart';
 import 'details_screen.dart';
 
 class GalleryGrid extends StatelessWidget {
-
   User? user = FirebaseAuth.instance.currentUser;
   UserModel loggedInUser = UserModel();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
+      backgroundColor: Colors.lightGreenAccent,
       // appBar: AppBar(
       //   title: Text('Photo Gallery'),
       // ),
@@ -43,11 +44,12 @@ class GalleryGrid extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () async {
-                    // Fetch photos button pressed
-                    // Add logic to show a photo picker and upload the selected photo
-
-
-
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ImageUpload(
+                                  userId: loggedInUser.uid,
+                                )));
                   },
                   child: Icon(Icons.add),
                 ),

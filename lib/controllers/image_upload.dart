@@ -77,7 +77,7 @@ class _ImageUploadState extends State<ImageUpload> {
                           width: 300,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            border: Border.all(color: Colors.red),
+                            border: Border.all(color: Colors.green),
                           ),
                           child: Center(
                             child: Column(
